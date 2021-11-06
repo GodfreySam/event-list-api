@@ -2,7 +2,7 @@
 	"engines": {
 		"node": "14.17.3"
 	},
-	"name": "backend",
+	"name": "api",
 	"version": "1.0.0",
 	"description": "",
 	"main": "app.js",
@@ -12,7 +12,7 @@
 		"build": "cd client && npm install && npm run build"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Godfrey Samuel",
 	"license": "ISC",
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
