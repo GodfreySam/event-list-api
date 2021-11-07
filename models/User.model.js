@@ -6,6 +6,7 @@ let userSchema = new Schema(
 		fullname: String,
 		email: String,
 		password: String,
+		avatar: String,
 	},
 	{ timestamps: true },
 );
