@@ -2,13 +2,13 @@ let { Todo } = require("../../models/Todo.model");
 
 const createNewTodo = async (req, res) => {
 	try {
-		let { event, user } = req.body;
+		let { event } = req.body;
 
 		if (!event) return res.status(400).json({ msg: "Please type an event" });
 
 		const newTodo = new Todo({
 			event,
-			user,
+			user: req.user._id,
 		});
 
 

@@ -3,6 +3,8 @@ const router = express.Router();
 const profilePicUpload = require('../../controllers/user/profilePic.controller');
 const upload = require('../../config/multerSetup');
 const verify = require("../../middleware/authjwt");
+const getAvatar = require("../../controllers/user/getAvatar.controller");
+
 
 router.post(
 	"/update-avatar",
@@ -10,5 +12,8 @@ router.post(
 	upload.single("profilePic"),
 	profilePicUpload,
 );
+
+router.get("/", verify, getAvatar);
+
 
 module.exports = router;
