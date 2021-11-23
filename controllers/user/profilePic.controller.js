@@ -40,7 +40,8 @@ const dpUpload = async (req, res) => {
 			uploadedImage,
 		});
 	} catch (err) {
-		return res.status(500).json({ success: false, msg: err.message });
+		// return res.status(500).json({ success: false, msg: err.message });
+		console.log(err);
 	}
 };
 
